@@ -1,0 +1,4 @@
+[38;20m2024-05-03 18:42:08,269 - my_logger - INFO - An info message (main.py:40)[0m
+[33;20m2024-05-03 18:42:08,269 - my_logger - WARNING - Something is not right. (main.py:41)[0m
+[31;20m2024-05-03 18:42:08,269 - my_logger - ERROR - A Major error has happened. (main.py:42)[0m
+[31;1m2024-05-03 18:42:08,269 - my_logger - CRITICAL - Fatal error. Cannot continue (main.py:43)[0m
