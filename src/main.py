@@ -61,10 +61,8 @@ class Candle(logging.Logger):
     def critical(self, msg, *args, **kwargs):
         super().critical(self.format("critical", msg, *args, **kwargs))
 
-log = Candle(level=logging.DEBUG)
 
-log.debug("debug message", "hello", kwarg1="world")
-log.info("info message")
-log.warning("warning message")
-log.error("error message")
-log.critical("critical message")
+# log = Candle(level=logging.DEBUG)
+
+# log.debug("debug message", "hello", kwarg1="world")
+# log.info("info messaged")
