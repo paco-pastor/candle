@@ -55,14 +55,17 @@ class Candle(logging.Logger):
     def warning(self, msg, *args, **kwargs):
         super().warning(self.format("warning", msg, *args, **kwargs))
     
-    def error(self, msg, *args, **kwargs):
+    def error(self, msg, *args, **kwargs): # super is not called !!
         super().error(self.format("error", msg, *args, **kwargs))
     
     def critical(self, msg, *args, **kwargs):
         super().critical(self.format("critical", msg, *args, **kwargs))
 
 
-# log = Candle(level=logging.DEBUG)
+log = Candle(level=logging.DEBUG)
 
-# log.debug("debug message", "hello", kwarg1="world")
-# log.info("info messaged")
+log.debug("debug message", "hello", kwarg1="world")
+log.info("info messaged")
+log.warning("warning message")
+log.error("error message")
+log.critical("critical message")
