@@ -1,6 +1,10 @@
 from main import Candle
 
-# TODO raise exception with personnalized logs, dont continue the program
+# TODO LIST
+# [ ] Raise exception with personnalized logs, dont continue the program
+# [ ] File with minimal logs, file with complete logs
+# [ ] Log files separation into folders depending on code location
+# [ ] .candle or .yml config file instead of manual config
 
 
 def candle(entity):
