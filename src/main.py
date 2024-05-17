@@ -44,28 +44,28 @@ class Candle(logging.Logger):
             self.emoji_mapper = emoji_mapper
     
     def format(self, level, msg, *args, **kwargs):
-        return f"{self.emoji_mapper[level]} {msg} " + " ".join(args) + " " + " ".join(kwargs.values())
+        return f"{self.emoji_mapper[level]} {msg} "
 
-    def debug(self, msg, *args, **kwargs):
-        super().debug(self.format("debug", msg, *args, **kwargs))
+    def debug(self, msg):
+        super().debug(self.format("debug", msg))
     
-    def info(self, msg, *args, **kwargs):
-        super().info(self.format("info", msg, *args, **kwargs))
+    def info(self, msg):
+        super().info(self.format("info", msg))
 
-    def warning(self, msg, *args, **kwargs):
-        super().warning(self.format("warning", msg, *args, **kwargs))
+    def warning(self, msg):
+        super().warning(self.format("warning", msg))
     
-    def error(self, msg, *args, **kwargs):
-        super().error(self.format("error", msg, *args, **kwargs))
+    def error(self, msg):
+        super().error(self.format("error", msg))
     
-    def critical(self, msg, *args, **kwargs):
-        super().critical(self.format("critical", msg, *args, **kwargs))
+    def critical(self, msg):
+        super().critical(self.format("critical", msg))
 
 
-# log = Candle(level=logging.DEBUG)
+log = Candle(level=logging.DEBUG)
 
-# log.debug("debug message", "hello", kwarg1="world")
-# log.info("info messaged")
-# log.warning("warning message")
-# log.error("error message")
-# log.critical("critical message")
+log.debug("debug message")
+log.info("info messaged")
+log.warning("warning message")
+log.error("error message")
+log.critical("critical message")
