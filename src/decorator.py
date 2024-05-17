@@ -1,5 +1,5 @@
 from main import Candle
-
+import sys
 # TODO LIST
 # [ ] Raise exception with personnalized logs, dont continue the program
 # [ ] File with minimal logs, file with complete logs
@@ -9,7 +9,6 @@ from main import Candle
 
 def candle(entity):
     if isinstance(entity, type):
-        
         def wrapper(entity):
             for attr in entity.__dict__:
                 if callable(getattr(entity, attr)):
@@ -22,8 +21,8 @@ def candle(entity):
             try:
                 return entity(*args, **kwargs)
             except Exception as e:
-                # raise # for debug
                 Candle().error(f"Erreur dans {entity.__name__}" + str(e))
+                sys.exit()
         return wrapper
 
 
