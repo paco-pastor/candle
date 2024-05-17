@@ -43,7 +43,7 @@ class Candle(logging.Logger):
         if emoji_mapper:
             self.emoji_mapper = emoji_mapper
     
-    def format(self, level, msg, *args, **kwargs):
+    def format(self, level, msg):
         return f"{self.emoji_mapper[level]} {msg} "
 
     def debug(self, msg):
