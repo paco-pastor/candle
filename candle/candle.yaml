@@ -1,0 +1,6 @@
+emojis:
+  debug: "🐛"
+  info: "ℹ️"
+  warning: "⚠️"
+  error: "🚨"
+  critical: "💥"
