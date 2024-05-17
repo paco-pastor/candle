@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from src.main import Candle
+from candle.main import Candle
 
 class CandleTestCase(TestCase):
 
