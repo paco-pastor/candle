@@ -32,7 +32,7 @@ class Candle(logging.Logger):
     console_handler = logging.StreamHandler()
     config = Config()
 
-    def __init__(self, app="LOGGER", level=logging.INFO):
+    def __init__(self, app="APP", level=logging.INFO):
         super().__init__(app)
         self.setLevel(level)
         self.console_handler.setLevel(level)
@@ -62,7 +62,7 @@ class Candle(logging.Logger):
 log = Candle(level=logging.DEBUG)
 
 log.debug("debug message")
-log.info("info messaged")
+log.info("info message")
 log.warning("warning message")
 log.error("error message")
 log.critical("critical message")
