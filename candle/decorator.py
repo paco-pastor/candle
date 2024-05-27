@@ -3,7 +3,7 @@ import sys
 from main import Candle
 
 # TODO LIST
-# [X] Raise exception with personnalized logs, dont continue the program
+# [ ] Raise exception with personnalized logs, dont continue the program
 # [ ] File with minimal logs, file with complete logs
 # [ ] Log files separation into folders depending on code location
 # [ ] .candle or .yml config file instead of manual config
@@ -26,7 +26,7 @@ def candle(entity):
                 return entity(*args, **kwargs)
             except Exception as e:
                 Candle().error(f"Erreur dans {entity.__name__}" + str(e))
-                sys.exit()
+                sys.exit()  # TODO this is bad, maybe replace with custom exception
 
         return wrapper
 
